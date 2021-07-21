@@ -2,7 +2,7 @@
 title: "Event Engine Setup"
 chapter: true
 draft: false
-weight: 3
+weight: 2
 ---
 
 # Event Engine
