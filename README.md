@@ -1,17 +1,20 @@
-## My Project
+# AWSWorkshop.io Workshop - HashiCorp - Terraform
 
-TODO: Fill this README out!
+This is the repository to generate the AWS/HashiCorp Terraform Workshop from and execute with Hugo.
 
-Be sure to:
+## To Execute.
+Hugo is leveraged as the site generator. https://gohugo.io/about/what-is-hugo/
 
-* Change the title in this README
-* Edit your repository description on GitHub
+```
+#Install Hugo
+brew install hugo
 
-## Security
+#Execute Hugo on Root of Local Clone Repo
+hugo server
+```
 
-See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
+With the local Hugo server running, head to http://localhost:1313
 
-## License
+Cheers!
 
-This library is licensed under the MIT-0 License. See the LICENSE file.
-
+-AWS Modernization Team
