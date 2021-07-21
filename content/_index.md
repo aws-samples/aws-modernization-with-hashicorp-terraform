@@ -4,8 +4,9 @@ chapter: true
 weight: 1
 ---
 
-# AWS Marketplace DevOps Workshop Series Hands-on Lab with HashiCorp Terraform Cloud
+# AWS Modernization Workshop with HashiCorp Terraform Cloud
 
+![Terraform Cloud Logo](/images/hashicorp/terraform-logo.png)
 
 ### Welcome
 
