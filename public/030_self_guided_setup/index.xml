@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Self Guided Setup on MP DevOps Series</title>
+    <link>/030_self_guided_setup.html</link>
+    <description>Recent content in Self Guided Setup on MP DevOps Series</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language><atom:link href="/030_self_guided_setup/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1. AWS Account Setup</title>
+      <link>/030_self_guided_setup/30_aws_setup_your_own.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/030_self_guided_setup/30_aws_setup_your_own.html</guid>
+      <description>Setting up your AWS account  You are responsible for the cost of the AWS services used while running this workshop in your AWS account. We highly recommend you to go to the request AWS credit page so you can run this workshop without any charge to you.
+  If you don&amp;rsquo;t already have an AWS account with Administrator access: create one now by clicking here
+ Once you have an AWS account, ensure you are following the remaining workshop steps as an IAM user with administrator access to the AWS account: Create a new IAM user to use for the workshop</description>
+    </item>
+    
+    <item>
+      <title>2. AWS Credit Request</title>
+      <link>/030_self_guided_setup/32_request_credit.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/030_self_guided_setup/32_request_credit.html</guid>
+      <description>To help you cover the AWS service costs incurred by doing this tutorial, AWS Credits are available courtesy of AWS Marketplace. Submit the form and you will receive a confirmation email with an AWS Credit Code. Credits are available while supplies last.  Request AWS Credits         AWS Marketplace is a digital software catalog that makes it easy to find, try, buy, deploy, and manage software that works with AWS.</description>
+    </item>
+    
+    <item>
+      <title>3. Create a Workspace</title>
+      <link>/030_self_guided_setup/34_start_cloud9workspace.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/030_self_guided_setup/34_start_cloud9workspace.html</guid>
+      <description>Set up the Workspace AWS Cloud9 is a cloud-based integrated development environment (IDE) that lets you write, run, and debug your code with just a browser. It includes a code editor, debugger, and terminal. Cloud9 comes prepackaged with essential tools for popular programming languages, including JavaScript, Python, PHP, and more, so you don’t need to install files or configure your laptop for this workshop.
+We will use Amazon Cloud9 to access our AWS accounts via the AWS CLI in this Workshop.</description>
+    </item>
+    
+    <item>
+      <title>5. Configure workshop specific requirements</title>
+      <link>/030_self_guided_setup/36_config_workshop_req.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/030_self_guided_setup/36_config_workshop_req.html</guid>
+      <description>Configure Workspace  Return to your workspace and click the gear icon (in top right corner), or click to open a new tab and choose &amp;ldquo;Open Preferences&amp;rdquo;
+ Select AWS SETTINGS and turn off AWS managed temporary credentials
+ Close the Preferences tab
+ Copy and run (paste with Ctrl+P or CMD+P) the commands below.
+Before running it, review what it does by reading through the comments.
+# Update awscli sudo pip install --upgrade awscli &amp;amp;&amp;amp; hash -r # Install jq command-line tool for parsing JSON, and bash-completion sudo yum -y install jq gettext bash-completion moreutils # Install yq for yaml processing echo &amp;#39;yq() { docker run --rm -i -v &amp;#34;${PWD}&amp;#34;:/workdir mikefarah/yq yq &amp;#34;$@&amp;#34; }&amp;#39; | tee -a ~/.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sentinel on MP DevOps Series</title>
+    <link>/060_sentinel.html</link>
+    <description>Recent content in Sentinel on MP DevOps Series</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language><atom:link href="/060_sentinel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Enforce a Policy</title>
+      <link>/060_sentinel/6-policy-quickstart.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/060_sentinel/6-policy-quickstart.html</guid>
+      <description>Sentinel is an embedded policy-as-code framework integrated with various HashiCorp products. It enables fine-grained, logic-based policy decisions, and can be extended to use information from external sources. Terraform Cloud enables users to enforce policies during runs.
+A policy consists of:
+ The policy controls defined as code An enforcement level that changes how a policy affects the run lifecycle  This functionality is available in the Terraform Cloud Team &amp;amp; Governance tier, as well as Enterprise.</description>
+    </item>
+    
+    <item>
+      <title>Control Costs with Policies</title>
+      <link>/060_sentinel/7-cost-estimation.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/060_sentinel/7-cost-estimation.html</guid>
+      <description>Terraform Cloud estimates costs for many resources found in your Terraform configuration. It displays an hourly and monthly cost for each resource, and the monthly delta. It also totals the cost and delta of all estimatable resources.
+In this tutorial, you will enable cost estimation and define policy to check whether the total monthly delta is less than one hundred dollars a month.
+This functionality is available in the Terraform Cloud Team &amp;amp; Governance tier, as well as Enterprise.</description>
+    </item>
+    
+  </channel>
+</rss>

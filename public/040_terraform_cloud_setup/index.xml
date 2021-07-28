@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Terraform Cloud Setup on MP DevOps Series</title>
+    <link>/040_terraform_cloud_setup.html</link>
+    <description>Recent content in Terraform Cloud Setup on MP DevOps Series</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language><atom:link href="/040_terraform_cloud_setup/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sign up for Terraform Cloud</title>
+      <link>/040_terraform_cloud_setup/1-cloud-sign-up.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/040_terraform_cloud_setup/1-cloud-sign-up.html</guid>
+      <description>In this tutorial, you will learn about how Terraform Cloud enables collaboration. Then, you will sign up for a Terraform Cloud account and create an organization.
+What is Terraform Cloud? Terraform Cloud is an application that manages Terraform runs in a consistent and reliable environment instead of on your local machine. It stores shared state and secret data, and connects to version control systems so that you and your team can work on infrastructure as code within your usual code workflow.</description>
+    </item>
+    
+    <item>
+      <title>Create a Workspace</title>
+      <link>/040_terraform_cloud_setup/2-cloud-workspace-create.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/040_terraform_cloud_setup/2-cloud-workspace-create.html</guid>
+      <description>In this tutorial, you will create a version control system (VCS) driven Terraform Cloud workspace by connecting a sample repository to Terraform Cloud. This Terraform Cloud workspace will provision an AWS EC2 instance.
+Prerequisites While Terraform can provision resources on many different providers and connect with several popular version control systems (VCSs), this tutorial requires:
+ an AWS account a GitHub account  Fork a Github repository Visit this example GitHub repository, which contains the Terraform configuration for an EC2 instance.</description>
+    </item>
+    
+  </channel>
+</rss>

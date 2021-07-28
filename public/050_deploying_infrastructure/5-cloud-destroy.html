@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="oyo" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.85.0" />
+    <meta name="description" content="AWS Modernization Workshop">
+<meta name="author" content="James Bland">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Destroy Resources and Workspaces :: MP DevOps Series</title>
+
+    
+    <link href="/css/nucleus.css?1626962734" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1626962734" rel="stylesheet">
+    <link href="/css/hybrid.css?1626962734" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1626962734" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1626962734" rel="stylesheet">
+    <link href="/css/auto-complete.css?1626962734" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1626962734" rel="stylesheet">
+    <link href="/css/theme.css?1626962734" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1626962734" rel="stylesheet">
+    
+    <link href="/css/theme-mine.css?1626962734" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1626962734"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    <script type="text/javascript">
+    (function() {
+          var didInit = false;
+          function initMunchkin() {
+              if (didInit === false) {
+                didInit = true;
+                Munchkin.init("112-TZM-766", { domainLevel: 3 });
+              }
+          }
+          var s = document.createElement('script');
+          s.type = 'text/javascript';
+          s.async = true;
+          s.src = '//munchkin.marketo.net/munchkin.js';
+          s.onreadystatechange = function() {
+              if (this.readyState == 'complete' || this.readyState == 'loaded') {
+                  initMunchkin();
+              }
+          };
+          s.onload = initMunchkin;
+          document.getElementsByTagName('head')[0].appendChild(s);
+    })();
+</script>
+
+<link rel="stylesheet" href="/css/mp-devops-series.css">
+<link rel="stylesheet" href="https://pages.awscloud.com/js/forms2/css/forms2.css">
+
+  </head>
+  <body class="" data-url="/050_deploying_infrastructure/5-cloud-destroy.html">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a href="/" title="Go home"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 30" width="60%" style="padding:20px 0px;"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#f90;fill-rule:evenodd;}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"></path><path class="cls-2" d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"></path><path class="cls-2" d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"></path></svg></a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1626962734"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1626962734"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1626962734"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href='/'><i class='fas fa-home'></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/010_introduction.html" title="Introduction" class="dd-item
+        
+        
+        
+        ">
+      <a href="/010_introduction.html">
+          Introduction
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/010_introduction/10_foreword.html" title="Foreword" class="dd-item ">
+        <a href="/010_introduction/10_foreword.html">
+        Foreword
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/010_introduction/12_problem_to_solve.html" title="Problem Statement" class="dd-item ">
+        <a href="/010_introduction/12_problem_to_solve.html">
+        Problem Statement
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/010_introduction/14_partner.html" title="Who is this partner?" class="dd-item ">
+        <a href="/010_introduction/14_partner.html">
+        Who is this partner?
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/010_introduction/16_workshop_next_step.html" title="Workshop Next Steps" class="dd-item ">
+        <a href="/010_introduction/16_workshop_next_step.html">
+        Workshop Next Steps
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/030_self_guided_setup.html" title="Self Guided Setup" class="dd-item
+        
+        
+        
+        ">
+      <a href="/030_self_guided_setup.html">
+          Self Guided Setup
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/030_self_guided_setup/30_aws_setup_your_own.html" title="1. AWS Account Setup" class="dd-item ">
+        <a href="/030_self_guided_setup/30_aws_setup_your_own.html">
+        1. AWS Account Setup
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/030_self_guided_setup/32_request_credit.html" title="2. AWS Credit Request" class="dd-item ">
+        <a href="/030_self_guided_setup/32_request_credit.html">
+        2. AWS Credit Request
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/030_self_guided_setup/34_start_cloud9workspace.html" title="3. Create a Workspace" class="dd-item ">
+        <a href="/030_self_guided_setup/34_start_cloud9workspace.html">
+        3. Create a Workspace
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/030_self_guided_setup/36_config_workshop_req.html" title="5. Configure workshop specific requirements" class="dd-item ">
+        <a href="/030_self_guided_setup/36_config_workshop_req.html">
+        5. Configure workshop specific requirements
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/040_terraform_cloud_setup.html" title="Terraform Cloud Setup" class="dd-item
+        
+        
+        
+        ">
+      <a href="/040_terraform_cloud_setup.html">
+          Terraform Cloud Setup
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/040_terraform_cloud_setup/1-cloud-sign-up.html" title="Sign up for Terraform Cloud" class="dd-item ">
+        <a href="/040_terraform_cloud_setup/1-cloud-sign-up.html">
+        Sign up for Terraform Cloud
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/040_terraform_cloud_setup/2-cloud-workspace-create.html" title="Create a Workspace" class="dd-item ">
+        <a href="/040_terraform_cloud_setup/2-cloud-workspace-create.html">
+        Create a Workspace
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/050_deploying_infrastructure.html" title="Deploying Infrastructure" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/050_deploying_infrastructure.html">
+          Deploying Infrastructure
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/050_deploying_infrastructure/3-cloud-workspace-configure.html" title="Create Infrastructure" class="dd-item ">
+        <a href="/050_deploying_infrastructure/3-cloud-workspace-configure.html">
+        Create Infrastructure
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/050_deploying_infrastructure/4-cloud-change.html" title="Change Infrastructure" class="dd-item ">
+        <a href="/050_deploying_infrastructure/4-cloud-change.html">
+        Change Infrastructure
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/050_deploying_infrastructure/5-cloud-destroy.html" title="Destroy Resources and Workspaces" class="dd-item active">
+        <a href="/050_deploying_infrastructure/5-cloud-destroy.html">
+        Destroy Resources and Workspaces
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/060_sentinel.html" title="Sentinel" class="dd-item
+        
+        
+        
+        ">
+      <a href="/060_sentinel.html">
+          Sentinel
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/060_sentinel/6-policy-quickstart.html" title="Enforce a Policy" class="dd-item ">
+        <a href="/060_sentinel/6-policy-quickstart.html">
+        Enforce a Policy
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/060_sentinel/7-cost-estimation.html" title="Control Costs with Policies" class="dd-item ">
+        <a href="/060_sentinel/7-cost-estimation.html">
+        Control Costs with Policies
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/090_cleanup.html" title="Cleanup" class="dd-item
+        
+        
+        
+        ">
+      <a href="/090_cleanup.html">
+          Cleanup
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/099_survey.html" title="Survey" class="dd-item
+        
+        
+        
+        ">
+      <a href="/099_survey.html">
+          Survey
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3></h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://awsworkshop.io"><i class='fas fa-graduation-cap'></i> Modernization Workshops</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://aws.amazon.com/builders-library/"><i class='fas fa-tools'></i> AWS Builders Library</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://aws.amazon.com/blogs/modernizing-with-aws/"><i class='far fa-lightbulb'></i> Modernization with AWS</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://eksworkshop.com/"><i class='fas fa-chalkboard-teacher'></i> EKS Workshop</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://ecsworkshop.com/"><i class='fas fa-chalkboard-teacher'></i> ECS Workshop</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://www.appmeshworkshop.com/"><i class='fas fa-chalkboard-teacher'></i> App Mesh Workshop</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="oyo" value="/050_deploying_infrastructure/5-cloud-destroy.html" selected>MP DevOps Series</option>
+                    
+                  
+              
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> </a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <left>
+
+    <a href="https://aws.amazon.com/privacy/?nc1=f_pr">Privacy</a> | <a
+        href="https://aws.amazon.com/terms/?nc1=f_pr">Site Terms</a> | © 2021, Amazon Web Services, Inc. or its
+    affiliates. All rights reserved.
+
+</left>
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>AWS Modernization Workshop</a> > <a href='/050_deploying_infrastructure.html'>Deploying Infrastructure</a> > Destroy Resources and Workspaces
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#destroy-infrastructure">Destroy infrastructure</a>
+<ul>
+<li><a href="#queue-a-destroy-plan">Queue a destroy plan</a></li>
+<li><a href="#destroy-the-infrastructure">Destroy the infrastructure</a></li>
+</ul></li>
+<li><a href="#delete-the-aws-iam-user-optional">Delete the AWS IAM user (optional)</a></li>
+<li><a href="#delete-the-workspace-optional">Delete the workspace (optional)</a></li>
+<li><a href="#next-steps">Next steps</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Destroy Resources and Workspaces
+            </h1>
+          
+
+        
+
+
+
+
+<hr />
+
+<p>In this tutorial, you will destroy the EC2 instance and delete your Terraform Cloud workspace.</p>
+
+<p>Over the course of these tutorials, you created an EC2 instance in AWS, a Terraform Cloud workspace, and a GitHub repository.</p>
+
+<h2 id="destroy-infrastructure">Destroy infrastructure</h2>
+
+<p>Now that you have provisioned and changed infrastructure with Terraform Cloud, the final stage of your infrastructure&rsquo;s lifecycle is to destroy it. Terraform Cloud allows you to destroy the infrastructure you have provisioned as a part of the standard workflow.</p>
+
+<p>To destroy the infrastructure you provisioned in these tutorials, go to your workspace in the Terraform Cloud UI. Next, from the top menu, select <strong>&ldquo;Settings -&gt; Destruction and Deletion&rdquo;</strong>.</p>
+
+<p><img src="/images/hashicorp/terraform/tfc_hashicorp-training_workspaces_tfc-guide-example_destruction_and_deletion.png" alt="Terraform Cloud workspace destruction and deletion" /></p>
+
+<p>From this page you can:</p>
+
+<ul>
+<li><strong>Queue destroy plan</strong> destroys all infrastructure managed by the workspace.</li>
+<li><strong>Delete from Terraform Cloud</strong> deletes your workspace from Terraform Cloud without destroying the infrastructure the workspace manages.</li>
+</ul>
+
+
+<div class="notices note" ><p>Deleting a workspace does not destroy its infrastructure. For example, if you were to delete this workspace, the AWS EC2 instance you provisioned earlier would still exist.</p>
+</div>
+
+
+<h3 id="queue-a-destroy-plan">Queue a destroy plan</h3>
+
+<p>Click the red <strong>&ldquo;Queue destroy plan&rdquo;</strong> button.</p>
+
+<p>Terraform Cloud will prompt you to enter your workspace name before you can queue a destroy plan.</p>
+
+<p><img src="/images/hashicorp/terraform/cloud/queue-destroy-plan.png" alt="Queue Destroy Plan" /></p>
+
+<p>Enter your workspace name and queue the plan.</p>
+
+<h3 id="destroy-the-infrastructure">Destroy the infrastructure</h3>
+
+<p>As it does with all plans, Terraform Cloud will ask you to &ldquo;Confirm and Apply&rdquo; the plan. Do so now to destroy your EC2 instance.</p>
+
+<p>After a few minutes, the apply step should complete successfully.</p>
+
+<p><img src="/images/hashicorp/terraform/tfc_hashicorp-training_workspaces_tfc-guide-example_destroy_infrastructure.png" alt="Terraform Cloud workspace destroy infrastructure run" /></p>
+
+<p>Verify that Terraform destroyed the EC2 instance by visiting the <a href="https://console.aws.amazon.com/" target="_blank">AWS web console</a> in the region where you created it. The configuration defaults to region <strong>N. California/us-west-1</strong>.</p>
+
+<h2 id="delete-the-aws-iam-user-optional">Delete the AWS IAM user (optional)</h2>
+
+<p>If you created an AWS IAM user for these tutorials, delete or disable this user in the AWS console. Navigate to the Identity Access Management (IAM) section, and then to the user you created. Use the AWS Console to delete the user, or disable the user&rsquo;s access keys.</p>
+
+<h2 id="delete-the-workspace-optional">Delete the workspace (optional)</h2>
+
+
+<div class="notices tip" ><p>If you plan to continue to the next tutorial in this collection and your organization does not contain other workspaces, do <strong>not</strong> destroy the workspace created.</p>
+</div>
+
+
+<p>If you do not plan to run these tutorials again and want to keep your Terraform Cloud organization clean, you can delete the workspace you created. Terraform Cloud does not limit the number of workspaces you have or charge per workspace, so whether you delete the workspace is up to you.</p>
+
+<p>To delete the workspace, return to the <strong>&ldquo;Settings -&gt; Destruction
+&amp; Deletion&rdquo;</strong> page, and click the red <strong>&ldquo;Delete from Terraform Cloud&rdquo;</strong> button.</p>
+
+<p>Terraform Cloud will prompt you to enter your workspace name before you can click <strong>&ldquo;Delete workspace&rdquo;</strong>. Input the workspace name and click the button to delete the workspace.</p>
+
+<p><img src="/images/hashicorp/terraform/cloud/delete-workspace.png" alt="Delete workspace" /></p>
+
+<h2 id="next-steps">Next steps</h2>
+
+<p>In these tutorials you used Terraform Cloud to provision, change, and destroy infrastructure. Now you are ready to learn more about developing Terraform configurations. We recommend downloading the Terraform CLI so you can develop configurations locally. Get started with the CLI on your preferred cloud platform:</p>
+
+<ul>
+<li><a href="../../aws-get-started/../aws-learn/terraform-cloud-get-started/1-cloud-sign-up.md">Terraform CLI with AWS</a></li>
+</ul>
+
+<p>At the end of the CLI tutorials you will log into Terraform Cloud via the CLI, and get practice with Terraform Cloud&rsquo;s CLI-driven workflow.</p>
+
+<p>You can use the CLI workflow alongside the VCS workflow in these tutorials to develop infrastructure configuration locally, commit it to version control, and deploy it into production.</p>
+
+<p>To explore Terraform Cloud&rsquo;s paid features (which you can enable with a free trial), continue to the next tutorial. These include enforcing policies with Sentinel policy-as-code, and estimating the cost of infrastructure changes.</p>
+
+<p>Learn more about the concepts you used in these tutorials by <a href="https://www.terraform.io/docs/cloud/index.html" target="_blank">exploring the documentation</a>.</p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/050_deploying_infrastructure/4-cloud-change.html" title="Change Infrastructure"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/060_sentinel.html" title="Sentinel" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1626962734"></script>
+    <script src="/js/perfect-scrollbar.min.js?1626962734"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1626962734"></script>
+    <script src="/js/jquery.sticky.js?1626962734"></script>
+    <script src="/js/featherlight.min.js?1626962734"></script>
+    <script src="/js/highlight.pack.js?1626962734"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1626962734"></script>
+    <script src="/js/learn.js?1626962734"></script>
+    <script src="/js/hugo-learn.js?1626962734"></script>
+    
+        
+            <script src="/mermaid/mermaid.js?1626962734"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
+

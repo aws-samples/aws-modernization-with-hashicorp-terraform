@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduction on MP DevOps Series</title>
+    <link>/010_introduction.html</link>
+    <description>Recent content in Introduction on MP DevOps Series</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language><atom:link href="/010_introduction/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Foreword</title>
+      <link>/010_introduction/10_foreword.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/010_introduction/10_foreword.html</guid>
+      <description>How did we get here? Set the stage for the audience, this page isn&amp;rsquo;t mandatory but will can be a great page for a hook.</description>
+    </item>
+    
+    <item>
+      <title>Problem Statement</title>
+      <link>/010_introduction/12_problem_to_solve.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/010_introduction/12_problem_to_solve.html</guid>
+      <description>What is the problem Effective workshops require an important and common problem that the partner&amp;rsquo;s solution will solve. What is the problem?</description>
+    </item>
+    
+    <item>
+      <title>Who is this partner?</title>
+      <link>/010_introduction/14_partner.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/010_introduction/14_partner.html</guid>
+      <description>What is HashiCorp? HashiCorp is a remote-first company headquartered in San Francisco that solves development, operations, and security challenges in infrastructure so organizations can focus on business-critical tasks.
+HashiCorp was founded by Mitchell Hashimoto and Armon Dadgar in 2012 with the goal of revolutionizing datacenter management: application development, delivery, and maintenance.
+The datacenter of today is very different than the datacenter of yesterday, and we think the datacenter of tomorrow is just around the corner.</description>
+    </item>
+    
+    <item>
+      <title>Workshop Next Steps</title>
+      <link>/010_introduction/16_workshop_next_step.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/010_introduction/16_workshop_next_step.html</guid>
+      <description> Workshop Prerequisites There are a few prerequisite tasks you must perform before getting started on this workshop. These are:
+ Access to an AWS account w/ proper permissions A Cloud9 IDE Workspace Sign-up for partner&amp;rsquo;s free trial to use solution (if necessary)  In the next section, there will be instructions on how to set everything up, step by step.
+ </description>
+    </item>
+    
+  </channel>
+</rss>
