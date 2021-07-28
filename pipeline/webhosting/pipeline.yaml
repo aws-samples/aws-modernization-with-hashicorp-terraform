@@ -11,11 +11,11 @@ Parameters:
   ProjectName:
     Type: String
     Description: Project Name
-    Default: xxxxxxxx
+    Default: hashicorp-terraform
   WebsiteBucket:
     Type: String
     Description: Website S3 bucket name
-    Default: xxxxxxxx.awsworkshop.io 
+    Default: hashicorp-terraform.awsworkshop.io 
   CloudFrontDistroId:
     Type: String
     Description: CloudFront distribution ID 
@@ -23,11 +23,11 @@ Parameters:
   GitHubRepo:
     Type: String
     Description: repo name
-    Default: aws-modernization-xxxxxxx
+    Default: aws-modernization-with-hashicorp-terraform
   FullRepoURL:
     Type: String
     Description: The full url to the repo
-    Default: https://github.com/aws-samples/aws-modernization-xxxxxxxx.git  
+    Default: https://github.com/aws-samples/aws-modernization-with-hashicorp-terraform.git  
   GitHubOwner:
     Type: String
     Description: GitHub owner name
