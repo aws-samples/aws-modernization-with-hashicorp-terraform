@@ -31,7 +31,7 @@ A workspace is the basic unit of Terraform Cloud infrastructure configuration. A
 Since Terraform Cloud supports multiple users, you can collaborate with your team on each of these steps. For instance, each time you plan a new change, your team can review and approve the plan before it is applied.
 
 {{% notice tip %}}
-You can also use Terraform Cloud as a remote state backend for the CLI using local configuration and variables. Learn about this workflow in our [AWS](./../../aws-learn/terraform-cloud-get-started/1-cloud-sign-up.md) get started tutorials.
+You can also use Terraform Cloud as a remote state backend for the CLI using local configuration and variables.
 {{% /notice %}}
 
 ## Create an account
@@ -61,7 +61,7 @@ If you want to join an existing organization, give the organization's administra
 
 ![Create Organization](/images/hashicorp/terraform/cloud/new-organization.png)
 
-Then click **"Create organization"**. Terraform Cloud will prompt you to create a new workspace. The [Create a Workspace](2-cloud-workspace-create.md) tutorial will guide you through to creating a new workspace and connecting it to a version control repository.
+Then click **"Create organization"**. Terraform Cloud will prompt you to create a new workspace. The [Create a Workspace](2-cloud-workspace-create.html) tutorial will guide you through to creating a new workspace and connecting it to a version control repository.
 
 ## Next Steps
 

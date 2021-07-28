@@ -24,8 +24,6 @@ In this tutorial, you will define a policy set in a version control system (VCS)
 
 This tutorial assumes that you are familiar with Terraform Cloud and you have an existing Terraform Cloud workspace configured with AWS access credentials.
 
-If you do not, refer to the [Create a Workspace tutorial](2-cloud-workspace-create.md) and [Set Up Workspace tutorial](3-cloud-workspace-configure.md) to learn more about Terraform Cloud and set up a Terraform Cloud workspace configured with AWS access credentials.
-
 You must be in the **"owners"** team or have ["Manage Policies"](https://www.terraform.io/docs/cloud/users-teams-organizations/permissions.html#manage-policies) organization-level permissions to create new policy sets and policies.
 
 ## Fork GitHub Repository

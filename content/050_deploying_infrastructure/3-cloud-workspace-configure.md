@@ -5,7 +5,7 @@ weight: 12
 ---
 ---
 
-In this tutorial, you will customize the workspace you created [in the previous tutorial](2-cloud-workspace-create.md) by defining Terraform variables for your EC2 settings. Then, you will retrieve your AWS credentials and set them as sensitive environment variables. Finally, you will use Terraform Cloud to provision an EC2 instance.
+In this tutorial, you will customize the workspace you created [in the previous tutorial](/040_terraform_cloud_setup/2-cloud-workspace-create.html) by defining Terraform variables for your EC2 settings. Then, you will retrieve your AWS credentials and set them as sensitive environment variables. Finally, you will use Terraform Cloud to provision an EC2 instance.
 
 ## Configure Terraform variables
 
@@ -94,7 +94,7 @@ Congratulations! You created an AWS EC2 instance using Terraform Cloud.
 Verify that the infrastructure exists by visiting the [AWS web console](https://console.aws.amazon.com/) page for EC2 in the **N.California/us-west-1** region, the region specified in the provider configuration.
 
 {{% notice tip %}}
-The EC2 instance that you have provisioned will remain active until it is deleted. You will do this in the [clean-up](5-cloud-destroy.md) tutorial.
+The EC2 instance that you have provisioned will remain active until it is deleted. You will do this in the [clean-up](5-cloud-destroy.html) tutorial.
 {{% /notice %}}
 
 ## Next Steps

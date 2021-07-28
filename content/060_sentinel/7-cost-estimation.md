@@ -23,7 +23,7 @@ For this tutorial you will need:
 - A [GitHub account](https://github.com/)
 - An [AWS account to create example resources](https://aws.amazon.com/)
 
-You should also be familiar with how to [create](2-cloud-workspace-create.md) and [destroy](5-cloud-destroy.md#delete-the-workspace-optional) Terraform Cloud workspaces.
+You should also be familiar with how to **create** and **destroy** Terraform Cloud workspaces.
 
 {{% notice warning %}}
 Do not apply this policy to a production workspace as it may impact your production environment.

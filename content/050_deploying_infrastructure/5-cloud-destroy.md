@@ -69,7 +69,7 @@ Terraform Cloud will prompt you to enter your workspace name before you can clic
 
 In these tutorials you used Terraform Cloud to provision, change, and destroy infrastructure. Now you are ready to learn more about developing Terraform configurations. We recommend downloading the Terraform CLI so you can develop configurations locally. Get started with the CLI on your preferred cloud platform:
 
-- [Terraform CLI with AWS](../../aws-get-started/../aws-learn/terraform-cloud-get-started/1-cloud-sign-up.md)
+- [Terraform CLI with AWS](/030_self_guided_setup/37_install_terraform_cli.html)
 
 At the end of the CLI tutorials you will log into Terraform Cloud via the CLI, and get practice with Terraform Cloud's CLI-driven workflow.
 

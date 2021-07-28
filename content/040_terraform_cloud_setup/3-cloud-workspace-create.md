@@ -16,7 +16,7 @@ While Terraform can provision resources on many different providers and connect 
 
 ## Fork a Github repository
 
-Visit [this example GitHub repository](https://github.com/hashicorptfc-guide-example), which contains the Terraform configuration for an EC2 instance.
+Visit [this example GitHub repository](https://github.com/hashicorp/tfc-guide-example), which contains the Terraform configuration for an EC2 instance.
 
 Click the **"Fork"** button at the top right of the page to copy the repository to your GitHub account.
 

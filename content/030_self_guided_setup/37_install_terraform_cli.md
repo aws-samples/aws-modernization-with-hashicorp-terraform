@@ -217,6 +217,4 @@ Once the autocomplete support is installed, you will need to restart your shell.
 
 ## Next Steps
 
-Next, you will create real infrastructure in the cloud of your choice.
-
-- [Amazon Web Services (AWS)](/tutorials/terraform/aws-build)
+Next, you will create a Terraform Cloud account, and configure Terraform Cloud for your AWS deployments.
