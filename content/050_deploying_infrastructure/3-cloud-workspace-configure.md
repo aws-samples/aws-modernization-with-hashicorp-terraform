@@ -94,7 +94,7 @@ Congratulations! You created an AWS EC2 instance using Terraform Cloud.
 Verify that the infrastructure exists by visiting the [AWS web console](https://console.aws.amazon.com/) page for EC2 in the **N.California/us-west-1** region, the region specified in the provider configuration.
 
 {{% notice tip %}}
-The EC2 instance that you have provisioned will remain active until it is deleted. You will do this in the [clean-up](5-cloud-destroy.html) tutorial.
+The EC2 instance that you have provisioned will remain active until it is deleted. You will do this in the [clean-up](/090_cleanup/1-cloud-destroy.html) tutorial.
 {{% /notice %}}
 
 ## Next Steps
