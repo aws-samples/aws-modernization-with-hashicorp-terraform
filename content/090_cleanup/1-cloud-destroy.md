@@ -1,7 +1,7 @@
 ---
 title: "Terraform Destroy"
 chapter: false
-weight: 14
+weight: 1
 ---
 ---
 

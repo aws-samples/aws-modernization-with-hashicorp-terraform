@@ -8,6 +8,8 @@ To use Terraform you will need to install it. HashiCorp distributes Terraform as
 
 ## Install Terraform
 
+If you are using Cloud9, please follow instruction for Linux > Amazon Linux.
+
 {{< tabs >}}
 {{% tab name="Homebrew on OS X" groupId="ux" %}}
 

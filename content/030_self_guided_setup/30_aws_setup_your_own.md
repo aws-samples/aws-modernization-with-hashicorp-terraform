@@ -9,7 +9,7 @@ weight: 10
 {{% children %}}
 
 {{% notice warning %}}
-You are responsible for the cost of the AWS services used while running this workshop in your AWS account. We highly recommend you to go to the [request AWS credit page](/030_self_guided_setup/30_request_credit.html) so you can run this workshop without any charge to you.
+You are responsible for the cost of the AWS services used while running this workshop in your AWS account. We highly recommend you to go to the [request AWS credit page](/030_self_guided_setup/32_request_credit.html) so you can run this workshop without any charge to you.
 {{% /notice %}}
 
 1. If you don't already have an AWS account with Administrator access: [create
