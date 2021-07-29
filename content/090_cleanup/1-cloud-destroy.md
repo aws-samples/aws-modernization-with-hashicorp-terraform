@@ -1,5 +1,5 @@
 ---
-title: "Destroy Resources and Workspaces"
+title: "Terraform Destroy"
 chapter: false
 weight: 14
 ---
