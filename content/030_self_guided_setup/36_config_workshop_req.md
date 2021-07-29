@@ -1,20 +1,12 @@
 ---
-title: "5. Configure workshop"
+title: "4. Configure workshop"
 chapter: true
 weight: 18
 ---
 
 ## Configure Workspace
 
-1. Return to your workspace and click the gear icon (in top right corner), or click to open a new tab and choose "Open Preferences"
-
-2. Select **AWS SETTINGS** and turn off **AWS managed temporary credentials**
-
-3. Close the Preferences tab
-   
-    ![Turn off temp credentials](/images/setup/iamRoleWorkspace.gif)
-
-4. Copy and run (paste with **Ctrl+P** or **CMD+P**) the commands below.
+Copy and run (paste with **Ctrl+P** or **CMD+P**) the commands below.
 
       Before running it, review what it does by reading through the comments.
 
@@ -50,4 +42,4 @@ weight: 18
    If the IAM role is not valid, <span style="color: red;">**DO NOT PROCEED**</span>. Go back and confirm the steps on this page.
    {{% /notice %}}
 
-   If you are done, please proceed to the Partner Setup section!
+   If you are done, please proceed to the next section!

@@ -23,7 +23,7 @@ We will use Amazon Cloud9 to access our AWS accounts via the AWS CLI in this Wor
 
 3 . Click the **Create environment** button
 
-4 . For the name use `partnerName-workshop`, then click **Next step**
+4 . For the name use `hashicorp-workshop`, then click **Next step**
 
 5 . Select the default instance type **t3.micro**
 
