@@ -1,0 +1,92 @@
+[
+{
+	"uri": "/ee/",
+	"title": "AWS Modernization Workshop",
+	"tags": [],
+	"description": "",
+	"content": " AWS Modernization Workshop with HashiCorp Terraform Cloud Welcome This hands-on lab is part of the AWS Marketplace DevOps Workshop Series. In this lab, you will gain experience using HashiCorp Terraform Cloud to deploy infrastructure as code in AWS. By completing this lab you will learn how to leverage HashiCorp Terraform Cloud for easier deployments of your applications and infrastructure in AWS.\nInfrastructure as code (IaC) tools allow you to manage infrastructure with configuration files rather than through a graphical user interface. IaC allows you to build, change, and manage your infrastructure in a safe, consistent, and repeatable way by defining resource configurations that you can version, reuse, and share.\nTerraform is HashiCorp’s infrastructure as code tool. It lets you define resources and infrastructure in human-readable, declarative configuration files, and manages your infrastructure’s lifecycle. Using Terraform has several advantages over manually managing your infrastructure:\n Terraform can manage infrastructure on multiple cloud platforms. The human-readable configuration language helps you write infrastructure code quickly. Terraform\u0026rsquo;s state allows you to track resource changes throughout your deployments. You can commit your configurations to version control to safely collaborate on infrastructure.  HashiCorp Terraform Cloud is available in AWS Marketplace. AWS Marketplace is a digital software catalog that makes it easy to find, try, buy, deploy, and manage software that runs on AWS. AWS Marketplace has a broad and deep selection of ISV solutions that can help you build your ideal DevOps toolchain in the cloud.\n\n"
+},
+{
+	"uri": "/ee/010_introduction.html",
+	"title": "Introduction",
+	"tags": [],
+	"description": "",
+	"content": " Learning Objectives Today we are going to learn the following topics:\n What will the audience learn today? This section and all pages within it should set the stage and be the hook for why the audience should care.  Workshop Structure This workshop is broken into the sections list below. Estimated time for completing the workshop is 1.5-2.5 hours.\n Prerequisites (5 minutes) Provision a Cloud9 instance and validate Setup (15 minutes) Install necessary tooling to complete the lab What will the partner section look like and how long does it take to complete  "
+},
+{
+	"uri": "/ee/020_event_engine_setup.html",
+	"title": "Event Engine Setup",
+	"tags": [],
+	"description": "",
+	"content": " Event Engine Welcome to the Event Engine Setup section! This means that you are attending an AWS Hosted Workshop!! If you are not attending a workshop, please go to the self guided setup section. Event Engine is a tool created at AWS that provisions AWS accounts for workshop events like this! These accounts will automatically terminate 24 hours after the workshop begins participants don\u0026rsquo;t have to worry about leaving anything on. Each workshop participant will receive their own Event Engine AWS account.\nHere is a preview of what we will be setting up:\n Creating a Cloud9 IDE Workspace Attaching an EKS role to the Cloud9 instance Installing kubectl + other config updates on your Cloud9 instance  The next page will show you how to gain access to your Event Engine dashboard!\n"
+},
+{
+	"uri": "/ee/020_event_engine_setup/20_aws_event_engine.html",
+	"title": "1. AWS Event Engine",
+	"tags": [],
+	"description": "",
+	"content": " Attending an AWS hosted event To complete this workshop, you will be provided with an AWS account via the AWS Event Engine service. A team hash will be provided to you by event staff.\nIf you are currently logged in to an AWS Account, you can log out using this link\n Logging into Event Engine Dashboard  Connect to the portal by clicking the button or browsing to https://dashboard.eventengine.run/. The following screen shows up. Enter the provided hash in the text box. The button in the bottom right corner changes to Accept Terms \u0026amp; Login. Click on that button to continue.   Choose AWS Console, then Open AWS Console.   Use a single region for the duration of this workshop. This workshop supports the following regions:   us-east-1 (US East - N.Virginia)  Please select US East (N.Virginia) in the top right corner.\nThis account will expire at the end of the workshop and all the resources created will be automatically de-provisioned. You will not be able to access this account after today.\n "
+},
+{
+	"uri": "/ee/010_introduction/10_foreword.html",
+	"title": "Foreword",
+	"tags": [],
+	"description": "",
+	"content": " How did we get here? Set the stage for the audience, this page isn\u0026rsquo;t mandatory but will can be a great page for a hook.\n"
+},
+{
+	"uri": "/ee/020_event_engine_setup/22_start_cloud9workspace.html",
+	"title": "2. Create a Workspace",
+	"tags": [],
+	"description": "",
+	"content": " Set up the Workspace AWS Cloud9 is a cloud-based integrated development environment (IDE) that lets you write, run, and debug your code with just a browser. It includes a code editor, debugger, and terminal. Cloud9 comes prepackaged with essential tools for popular programming languages, including JavaScript, Python, PHP, and more, so you don’t need to install files or configure your laptop for this workshop.\nWe will use Amazon Cloud9 to access our AWS accounts via the AWS CLI in this Workshop. There are a few steps to complete to set this up\n Create a new Cloud9 IDE environment Create an IAM role for your workspace Attach the IAM role to your workspace Configure workshop specific requirements  Create a new Cloud9 IDE environment  Within the AWS console, use the region drop list to select us-east-1 (N. Virginia). This will ensure the workshop script provisions the resources in this same region..\n Navigate to the Cloud9 console or just search for it under the AWS console services menu.\n Click the Create environment button\n For the name use partnerName-workshop, then click Next step\n Select the default instance type t3.micro\n Leave all the other settings as default and click Next step followed by Create environment\n  This will take about 1-2 minutes to provision\n Configure Cloud9 IDE environment When the environment comes up, customize the environment by:\n Close the welcome page tab\n Close the lower work area tab\n Open a new terminal tab in the main work area.\n  If you don\u0026rsquo;t like this dark theme, you can change it from the View / Themes Cloud9 workspace menu.\n Cloud9 requires third-party-cookies. You can whitelist the specific domains. You are having issues with this, Ad blockers, javascript disablers, and tracking blockers should be disabled for the cloud9 domain, or connecting to the workspace might be impacted.\n "
+},
+{
+	"uri": "/ee/010_introduction/12_problem_to_solve.html",
+	"title": "Problem Statement",
+	"tags": [],
+	"description": "",
+	"content": " What is the problem Effective workshops require an important and common problem that the partner\u0026rsquo;s solution will solve. What is the problem?\n"
+},
+{
+	"uri": "/ee/020_event_engine_setup/24_attach_iam_role.html",
+	"title": "3. Attach IAM Role",
+	"tags": [],
+	"description": "",
+	"content": " Attach the IAM role to your instance Will need\n Follow this deep link to find your Cloud9 EC2 instance\n Select the instance, then choose Actions / Security / Modify IAM role\n Choose the role that contains your Partner Name in it.\n Click Save\n  "
+},
+{
+	"uri": "/ee/010_introduction/14_partner.html",
+	"title": "Who is this partner?",
+	"tags": [],
+	"description": "",
+	"content": " What is HashiCorp? HashiCorp is a remote-first company headquartered in San Francisco that solves development, operations, and security challenges in infrastructure so organizations can focus on business-critical tasks.\nHashiCorp was founded by Mitchell Hashimoto and Armon Dadgar in 2012 with the goal of revolutionizing datacenter management: application development, delivery, and maintenance.\nThe datacenter of today is very different than the datacenter of yesterday, and we think the datacenter of tomorrow is just around the corner. We\u0026rsquo;re writing software to take you all the way from yesterday to today, and then safely to tomorrow and beyond.\nPhysical, virtual, containers. Private cloud, public cloud, hybrid cloud. IaaS, PaaS, SaaS. Windows, Linux, Mac. These are just some of the choices faced when architecting a datacenter of today. And the choice is not one or the other; instead, it is often a combination of many of these.\nHashiCorp builds tools to ease these decisions by presenting solutions that span the gaps. Our tools manage both physical machines and virtual machines, Windows, and Linux, SaaS and IaaS, etc. And we\u0026rsquo;re committed to supporting next-generation technologies, as well.\nHashiCorp was founded and continues to be run by the primary authors of all our core technologies powering thousands of companies worldwide. We speak at conferences and write books related to application and infrastructure management.\nAll our foundational technologies are open source and developed openly, and have been since 2010.\n"
+},
+{
+	"uri": "/ee/020_event_engine_setup/26_config_workshop_req.html",
+	"title": "4. Configure workshop specific requirements",
+	"tags": [],
+	"description": "",
+	"content": " Configure Workspace Cloud9 normally manages IAM credentials dynamically. This isn\u0026rsquo;t currently compatible with the EKS IAM authentication, so we will disable it and rely on the IAM role instead.\n  Return to your workspace and click the gear icon (in top right corner), or click to open a new tab and choose \u0026ldquo;Open Preferences\u0026rdquo;\n Select AWS SETTINGS and turn off AWS managed temporary credentials\n Close the Preferences tab\n Copy and run (paste with Ctrl+P or CMD+P) the commands below.\nBefore running it, review what it does by reading through the comments.\n# Update awscli sudo pip install --upgrade awscli \u0026amp;\u0026amp; hash -r # Install jq command-line tool for parsing JSON, and bash-completion sudo yum -y install jq gettext bash-completion moreutils # Install yq for yaml processing echo \u0026#39;yq() { docker run --rm -i -v \u0026#34;${PWD}\u0026#34;:/workdir mikefarah/yq yq \u0026#34;$@\u0026#34; }\u0026#39; | tee -a ~/.bashrc \u0026amp;\u0026amp; source ~/.bashrc # Verify the binaries are in the path and executable for command in jq aws do which $command \u0026amp;\u0026gt;/dev/null \u0026amp;\u0026amp; echo \u0026#34;$commandin path\u0026#34; || echo \u0026#34;$commandNOT FOUND\u0026#34; done # Remove existing credentials file. rm -vf ${HOME}/.aws/credentials # Set the ACCOUNT_ID and the region to work with our desired region export AWS_REGION=$(curl -s 169.254.169.254/latest/dynamic/instance-identity/document | jq -r \u0026#39;.region\u0026#39;) test -n \u0026#34;$AWS_REGION\u0026#34; \u0026amp;\u0026amp; echo AWS_REGION is \u0026#34;$AWS_REGION\u0026#34; || echo AWS_REGION is not set # Validate that our IAM role is valid. aws sts get-caller-identity --query Arn | grep partnerName-workshop-admin -q \u0026amp;\u0026amp; echo \u0026#34;IAM role valid\u0026#34; || echo \u0026#34;IAM role NOT valid\u0026#34; If the IAM role is not valid, DO NOT PROCEED. Go back and confirm the steps on this page.\n   If you have completed the above instructions, please move to the Partner Setup section!\n"
+},
+{
+	"uri": "/ee/010_introduction/16_workshop_next_step.html",
+	"title": "Workshop Next Steps",
+	"tags": [],
+	"description": "",
+	"content": " Workshop Prerequisites There are a few prerequisite tasks you must perform before getting started on this workshop. These are:\n Access to an AWS account w/ proper permissions A Cloud9 IDE Workspace Sign-up for partner\u0026rsquo;s free trial to use solution (if necessary)  In the next section, there will be instructions on how to set everything up, step by step.\n "
+},
+{
+	"uri": "/ee/categories.html",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/ee/tags.html",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]

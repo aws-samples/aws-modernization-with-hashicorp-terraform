@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AWS Modernization Workshop on Event Engine</title>
+    <link>/ee/</link>
+    <description>Recent content in AWS Modernization Workshop on Event Engine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language><atom:link href="/ee/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1. AWS Event Engine</title>
+      <link>/ee/020_event_engine_setup/20_aws_event_engine.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/ee/020_event_engine_setup/20_aws_event_engine.html</guid>
+      <description>Attending an AWS hosted event To complete this workshop, you will be provided with an AWS account via the AWS Event Engine service. A team hash will be provided to you by event staff.
+If you are currently logged in to an AWS Account, you can log out using this link
+ Logging into Event Engine Dashboard  Connect to the portal by clicking the button or browsing to https://dashboard.</description>
+    </item>
+    
+    <item>
+      <title>Foreword</title>
+      <link>/ee/010_introduction/10_foreword.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/ee/010_introduction/10_foreword.html</guid>
+      <description>How did we get here? Set the stage for the audience, this page isn&amp;rsquo;t mandatory but will can be a great page for a hook.</description>
+    </item>
+    
+    <item>
+      <title>2. Create a Workspace</title>
+      <link>/ee/020_event_engine_setup/22_start_cloud9workspace.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/ee/020_event_engine_setup/22_start_cloud9workspace.html</guid>
+      <description>Set up the Workspace AWS Cloud9 is a cloud-based integrated development environment (IDE) that lets you write, run, and debug your code with just a browser. It includes a code editor, debugger, and terminal. Cloud9 comes prepackaged with essential tools for popular programming languages, including JavaScript, Python, PHP, and more, so you don’t need to install files or configure your laptop for this workshop.
+We will use Amazon Cloud9 to access our AWS accounts via the AWS CLI in this Workshop.</description>
+    </item>
+    
+    <item>
+      <title>Problem Statement</title>
+      <link>/ee/010_introduction/12_problem_to_solve.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/ee/010_introduction/12_problem_to_solve.html</guid>
+      <description>What is the problem Effective workshops require an important and common problem that the partner&amp;rsquo;s solution will solve. What is the problem?</description>
+    </item>
+    
+    <item>
+      <title>3. Attach IAM Role</title>
+      <link>/ee/020_event_engine_setup/24_attach_iam_role.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/ee/020_event_engine_setup/24_attach_iam_role.html</guid>
+      <description> Attach the IAM role to your instance Will need
+ Follow this deep link to find your Cloud9 EC2 instance
+ Select the instance, then choose Actions / Security / Modify IAM role
+ Choose the role that contains your Partner Name in it.
+ Click Save
+  </description>
+    </item>
+    
+    <item>
+      <title>Who is this partner?</title>
+      <link>/ee/010_introduction/14_partner.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/ee/010_introduction/14_partner.html</guid>
+      <description>What is HashiCorp? HashiCorp is a remote-first company headquartered in San Francisco that solves development, operations, and security challenges in infrastructure so organizations can focus on business-critical tasks.
+HashiCorp was founded by Mitchell Hashimoto and Armon Dadgar in 2012 with the goal of revolutionizing datacenter management: application development, delivery, and maintenance.
+The datacenter of today is very different than the datacenter of yesterday, and we think the datacenter of tomorrow is just around the corner.</description>
+    </item>
+    
+    <item>
+      <title>4. Configure workshop specific requirements</title>
+      <link>/ee/020_event_engine_setup/26_config_workshop_req.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/ee/020_event_engine_setup/26_config_workshop_req.html</guid>
+      <description>Configure Workspace Cloud9 normally manages IAM credentials dynamically. This isn&amp;rsquo;t currently compatible with the EKS IAM authentication, so we will disable it and rely on the IAM role instead.
+  Return to your workspace and click the gear icon (in top right corner), or click to open a new tab and choose &amp;ldquo;Open Preferences&amp;rdquo;
+ Select AWS SETTINGS and turn off AWS managed temporary credentials
+ Close the Preferences tab</description>
+    </item>
+    
+    <item>
+      <title>Workshop Next Steps</title>
+      <link>/ee/010_introduction/16_workshop_next_step.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/ee/010_introduction/16_workshop_next_step.html</guid>
+      <description> Workshop Prerequisites There are a few prerequisite tasks you must perform before getting started on this workshop. These are:
+ Access to an AWS account w/ proper permissions A Cloud9 IDE Workspace Sign-up for partner&amp;rsquo;s free trial to use solution (if necessary)  In the next section, there will be instructions on how to set everything up, step by step.
+ </description>
+    </item>
+    
+  </channel>
+</rss>

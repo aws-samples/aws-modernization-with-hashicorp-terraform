@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AWS Modernization Workshop on MP DevOps Series</title>
+    <link>/</link>
+    <description>Recent content in AWS Modernization Workshop on MP DevOps Series</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1. AWS Account Setup</title>
+      <link>/030_self_guided_setup/30_aws_setup_your_own.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/030_self_guided_setup/30_aws_setup_your_own.html</guid>
+      <description>Setting up your AWS account  You are responsible for the cost of the AWS services used while running this workshop in your AWS account. We highly recommend you to go to the request AWS credit page so you can run this workshop without any charge to you.
+  If you don&amp;rsquo;t already have an AWS account with Administrator access: create one now by clicking here
+ Once you have an AWS account, ensure you are following the remaining workshop steps as an IAM user with administrator access to the AWS account: Create a new IAM user to use for the workshop</description>
+    </item>
+    
+    <item>
+      <title>Foreword</title>
+      <link>/010_introduction/10_foreword.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/010_introduction/10_foreword.html</guid>
+      <description>How did we get here? Set the stage for the audience, this page isn&amp;rsquo;t mandatory but will can be a great page for a hook.</description>
+    </item>
+    
+    <item>
+      <title>Sign up for Terraform Cloud</title>
+      <link>/040_terraform_cloud_setup/1-cloud-sign-up.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/040_terraform_cloud_setup/1-cloud-sign-up.html</guid>
+      <description>In this tutorial, you will learn about how Terraform Cloud enables collaboration. Then, you will sign up for a Terraform Cloud account and create an organization.
+What is Terraform Cloud? Terraform Cloud is an application that manages Terraform runs in a consistent and reliable environment instead of on your local machine. It stores shared state and secret data, and connects to version control systems so that you and your team can work on infrastructure as code within your usual code workflow.</description>
+    </item>
+    
+    <item>
+      <title>Create a Workspace</title>
+      <link>/040_terraform_cloud_setup/2-cloud-workspace-create.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/040_terraform_cloud_setup/2-cloud-workspace-create.html</guid>
+      <description>In this tutorial, you will create a version control system (VCS) driven Terraform Cloud workspace by connecting a sample repository to Terraform Cloud. This Terraform Cloud workspace will provision an AWS EC2 instance.
+Prerequisites While Terraform can provision resources on many different providers and connect with several popular version control systems (VCSs), this tutorial requires:
+ an AWS account a GitHub account  Fork a Github repository Visit this example GitHub repository, which contains the Terraform configuration for an EC2 instance.</description>
+    </item>
+    
+    <item>
+      <title>2. AWS Credit Request</title>
+      <link>/030_self_guided_setup/32_request_credit.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/030_self_guided_setup/32_request_credit.html</guid>
+      <description>To help you cover the AWS service costs incurred by doing this tutorial, AWS Credits are available courtesy of AWS Marketplace. Submit the form and you will receive a confirmation email with an AWS Credit Code. Credits are available while supplies last.  Request AWS Credits         AWS Marketplace is a digital software catalog that makes it easy to find, try, buy, deploy, and manage software that works with AWS.</description>
+    </item>
+    
+    <item>
+      <title>Create Infrastructure</title>
+      <link>/050_deploying_infrastructure/3-cloud-workspace-configure.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/050_deploying_infrastructure/3-cloud-workspace-configure.html</guid>
+      <description>In this tutorial, you will customize the workspace you created in the previous tutorial by defining Terraform variables for your EC2 settings. Then, you will retrieve your AWS credentials and set them as sensitive environment variables. Finally, you will use Terraform Cloud to provision an EC2 instance.
+Configure Terraform variables Return to the Terraform Cloud UI and visit the &amp;ldquo;Variables&amp;rdquo; page for your tfc-guide-example workspace, where you will set your credentials.</description>
+    </item>
+    
+    <item>
+      <title>Problem Statement</title>
+      <link>/010_introduction/12_problem_to_solve.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/010_introduction/12_problem_to_solve.html</guid>
+      <description>What is the problem Effective workshops require an important and common problem that the partner&amp;rsquo;s solution will solve. What is the problem?</description>
+    </item>
+    
+    <item>
+      <title>Change Infrastructure</title>
+      <link>/050_deploying_infrastructure/4-cloud-change.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/050_deploying_infrastructure/4-cloud-change.html</guid>
+      <description>In this tutorial, you will change the name of your AWS EC2 instance by adjusting a Terraform variable in the Terraform Cloud web UI. You will also add an additional tag to your instance by opening and then merging a pull request to your configuration repository.
+Now that you have provisioned infrastructure with Terraform Cloud, you are ready to make changes to that infrastructure.
+There are two ways to update your workspace deployments on Terraform Cloud:</description>
+    </item>
+    
+    <item>
+      <title>3. Create a Workspace</title>
+      <link>/030_self_guided_setup/34_start_cloud9workspace.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/030_self_guided_setup/34_start_cloud9workspace.html</guid>
+      <description>Set up the Workspace AWS Cloud9 is a cloud-based integrated development environment (IDE) that lets you write, run, and debug your code with just a browser. It includes a code editor, debugger, and terminal. Cloud9 comes prepackaged with essential tools for popular programming languages, including JavaScript, Python, PHP, and more, so you don’t need to install files or configure your laptop for this workshop.
+We will use Amazon Cloud9 to access our AWS accounts via the AWS CLI in this Workshop.</description>
+    </item>
+    
+    <item>
+      <title>Destroy Resources and Workspaces</title>
+      <link>/050_deploying_infrastructure/5-cloud-destroy.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/050_deploying_infrastructure/5-cloud-destroy.html</guid>
+      <description>In this tutorial, you will destroy the EC2 instance and delete your Terraform Cloud workspace.
+Over the course of these tutorials, you created an EC2 instance in AWS, a Terraform Cloud workspace, and a GitHub repository.
+Destroy infrastructure Now that you have provisioned and changed infrastructure with Terraform Cloud, the final stage of your infrastructure&amp;rsquo;s lifecycle is to destroy it. Terraform Cloud allows you to destroy the infrastructure you have provisioned as a part of the standard workflow.</description>
+    </item>
+    
+    <item>
+      <title>Who is this partner?</title>
+      <link>/010_introduction/14_partner.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/010_introduction/14_partner.html</guid>
+      <description>What is HashiCorp? HashiCorp is a remote-first company headquartered in San Francisco that solves development, operations, and security challenges in infrastructure so organizations can focus on business-critical tasks.
+HashiCorp was founded by Mitchell Hashimoto and Armon Dadgar in 2012 with the goal of revolutionizing datacenter management: application development, delivery, and maintenance.
+The datacenter of today is very different than the datacenter of yesterday, and we think the datacenter of tomorrow is just around the corner.</description>
+    </item>
+    
+    <item>
+      <title>Enforce a Policy</title>
+      <link>/060_sentinel/6-policy-quickstart.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/060_sentinel/6-policy-quickstart.html</guid>
+      <description>Sentinel is an embedded policy-as-code framework integrated with various HashiCorp products. It enables fine-grained, logic-based policy decisions, and can be extended to use information from external sources. Terraform Cloud enables users to enforce policies during runs.
+A policy consists of:
+ The policy controls defined as code An enforcement level that changes how a policy affects the run lifecycle  This functionality is available in the Terraform Cloud Team &amp;amp; Governance tier, as well as Enterprise.</description>
+    </item>
+    
+    <item>
+      <title>Control Costs with Policies</title>
+      <link>/060_sentinel/7-cost-estimation.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/060_sentinel/7-cost-estimation.html</guid>
+      <description>Terraform Cloud estimates costs for many resources found in your Terraform configuration. It displays an hourly and monthly cost for each resource, and the monthly delta. It also totals the cost and delta of all estimatable resources.
+In this tutorial, you will enable cost estimation and define policy to check whether the total monthly delta is less than one hundred dollars a month.
+This functionality is available in the Terraform Cloud Team &amp;amp; Governance tier, as well as Enterprise.</description>
+    </item>
+    
+    <item>
+      <title>Workshop Next Steps</title>
+      <link>/010_introduction/16_workshop_next_step.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/010_introduction/16_workshop_next_step.html</guid>
+      <description> Workshop Prerequisites There are a few prerequisite tasks you must perform before getting started on this workshop. These are:
+ Access to an AWS account w/ proper permissions A Cloud9 IDE Workspace Sign-up for partner&amp;rsquo;s free trial to use solution (if necessary)  In the next section, there will be instructions on how to set everything up, step by step.
+ </description>
+    </item>
+    
+    <item>
+      <title>5. Configure workshop specific requirements</title>
+      <link>/030_self_guided_setup/36_config_workshop_req.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/030_self_guided_setup/36_config_workshop_req.html</guid>
+      <description>Configure Workspace  Return to your workspace and click the gear icon (in top right corner), or click to open a new tab and choose &amp;ldquo;Open Preferences&amp;rdquo;
+ Select AWS SETTINGS and turn off AWS managed temporary credentials
+ Close the Preferences tab
+ Copy and run (paste with Ctrl+P or CMD+P) the commands below.
+Before running it, review what it does by reading through the comments.
+# Update awscli sudo pip install --upgrade awscli &amp;amp;&amp;amp; hash -r # Install jq command-line tool for parsing JSON, and bash-completion sudo yum -y install jq gettext bash-completion moreutils # Install yq for yaml processing echo &amp;#39;yq() { docker run --rm -i -v &amp;#34;${PWD}&amp;#34;:/workdir mikefarah/yq yq &amp;#34;$@&amp;#34; }&amp;#39; | tee -a ~/.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Deploying Infrastructure on MP DevOps Series</title>
+    <link>/050_deploying_infrastructure.html</link>
+    <description>Recent content in Deploying Infrastructure on MP DevOps Series</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language><atom:link href="/050_deploying_infrastructure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Create Infrastructure</title>
+      <link>/050_deploying_infrastructure/3-cloud-workspace-configure.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/050_deploying_infrastructure/3-cloud-workspace-configure.html</guid>
+      <description>In this tutorial, you will customize the workspace you created in the previous tutorial by defining Terraform variables for your EC2 settings. Then, you will retrieve your AWS credentials and set them as sensitive environment variables. Finally, you will use Terraform Cloud to provision an EC2 instance.
+Configure Terraform variables Return to the Terraform Cloud UI and visit the &amp;ldquo;Variables&amp;rdquo; page for your tfc-guide-example workspace, where you will set your credentials.</description>
+    </item>
+    
+    <item>
+      <title>Change Infrastructure</title>
+      <link>/050_deploying_infrastructure/4-cloud-change.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/050_deploying_infrastructure/4-cloud-change.html</guid>
+      <description>In this tutorial, you will change the name of your AWS EC2 instance by adjusting a Terraform variable in the Terraform Cloud web UI. You will also add an additional tag to your instance by opening and then merging a pull request to your configuration repository.
+Now that you have provisioned infrastructure with Terraform Cloud, you are ready to make changes to that infrastructure.
+There are two ways to update your workspace deployments on Terraform Cloud:</description>
+    </item>
+    
+    <item>
+      <title>Destroy Resources and Workspaces</title>
+      <link>/050_deploying_infrastructure/5-cloud-destroy.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/050_deploying_infrastructure/5-cloud-destroy.html</guid>
+      <description>In this tutorial, you will destroy the EC2 instance and delete your Terraform Cloud workspace.
+Over the course of these tutorials, you created an EC2 instance in AWS, a Terraform Cloud workspace, and a GitHub repository.
+Destroy infrastructure Now that you have provisioned and changed infrastructure with Terraform Cloud, the final stage of your infrastructure&amp;rsquo;s lifecycle is to destroy it. Terraform Cloud allows you to destroy the infrastructure you have provisioned as a part of the standard workflow.</description>
+    </item>
+    
+  </channel>
+</rss>
