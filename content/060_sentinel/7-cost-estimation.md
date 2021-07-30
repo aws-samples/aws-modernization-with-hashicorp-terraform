@@ -57,8 +57,8 @@ If you completed the [Upload Your Sentinel Policy Set to Terraform Cloud tutoria
 ## Configure workspace variables
 
 1. Navigate to your `learn-sentinel-tfc` workspace's **"Variables"** page
-2. Define a variable called `instance_type` and set the value to `t2.large`.
-3. Define environment variables for your `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`. Be sure to set both as `sensitive`.
+1. Define a variable called `instance_type` and set the value to `t2.large`.
+1. Define environment variables for your `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`. Be sure to set both as `sensitive`.
 
 When complete, your variable definitions will match the following:
 
@@ -108,8 +108,8 @@ In Terraform Cloud, you can apply policy sets either across your organization, o
 On the **"Configure Settings"** page:
 
 1. Select **"Policies enforced on selected workspaces"** under **"Scope of Policies"**
-2. Select your `learn-sentinel-tfc` workspace and click the purple **"Add workspace button"**
-3. Click **"Connect policy set"**
+1. Select your `learn-sentinel-tfc` workspace and click the purple **"Add workspace button"**
+1. Click **"Connect policy set"**
 
 ![Configure policy set workspaces](/images/hashicorp/terraform/tfc_hashicorp-training_settings_configure_policy_set.png)
 

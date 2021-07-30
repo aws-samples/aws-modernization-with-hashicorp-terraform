@@ -14,7 +14,6 @@ We will use Amazon Cloud9 to access our AWS accounts via the AWS CLI in this Wor
 1. Create an EKS cluster
 1. Configure workshop specific requirements
 
-
 ## Create a new Cloud9 IDE environment
 
 1 . Within the AWS console, use the region drop list to select **us-east-1 (N. Virginia)**.  This will ensure the workshop script provisions the resources in this same region..

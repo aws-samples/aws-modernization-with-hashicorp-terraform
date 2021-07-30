@@ -16,7 +16,7 @@ the EKS IAM authentication, so we will disable it and rely on the IAM role inste
 1. Select **AWS SETTINGS** and turn off **AWS managed temporary credentials**
 
 1. Close the Preferences tab
-   
+
     ![Turn off temp credentials](/images/setup/iamRoleWorkspace.gif)
 
 1. Copy and run (paste with **Ctrl+P** or **CMD+P**) the commands below.
@@ -26,28 +26,28 @@ the EKS IAM authentication, so we will disable it and rely on the IAM role inste
       ```sh
       # Update awscli
       sudo pip install --upgrade awscli && hash -r
-      
+
       # Install jq command-line tool for parsing JSON, and bash-completion
       sudo yum -y install jq gettext bash-completion moreutils
-      
+
       # Install yq for yaml processing
       echo 'yq() {
       docker run --rm -i -v "${PWD}":/workdir mikefarah/yq yq "$@"
       }' | tee -a ~/.bashrc && source ~/.bashrc
-      
+
       # Verify the binaries are in the path and executable
       for command in jq aws
       do
         which $command &>/dev/null && echo "$command in path" || echo "$command NOT FOUND"
       done
-      
+
       # Remove existing credentials file.
       rm -vf ${HOME}/.aws/credentials
-      
+
       # Set the ACCOUNT_ID and the region to work with our desired region
       export AWS_REGION=$(curl -s 169.254.169.254/latest/dynamic/instance-identity/document | jq -r '.region')
       test -n "$AWS_REGION" && echo AWS_REGION is "$AWS_REGION" || echo AWS_REGION is not set
-      
+
       # Validate that our IAM role is valid.
       aws sts get-caller-identity --query Arn | grep partnerName-workshop-admin -q && echo "IAM role valid" || echo "IAM role NOT valid"
       ```

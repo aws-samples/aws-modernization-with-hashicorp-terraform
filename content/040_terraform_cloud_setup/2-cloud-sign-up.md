@@ -23,10 +23,10 @@ For more details on the Terraform Cloud tiers, visit the [feature overview](http
 A workspace is the basic unit of Terraform Cloud infrastructure configuration. A workspace contains Terraform configuration files, environment variables, Terraform input variables, and state files everything Terraform needs to manage a given collection of infrastructure. To manage infrastructure with Terraform Cloud, you:
 
 1. **Write configuration** - Create or update Terraform configuration, which represents your infrastructure in HashiCorp Configuration Language (HCL).
-2. **Commit changes to version control** - Check your configuration files into a version control system (VCS) as the source of truth for your configuration.
-3. **Select a workspace** - Connect the VCS repo containing your configuration to a new or existing Terraform Cloud workspace.
-4. **Configure variables** - Define your workspace's Terraform variables and environment variables. These are any values you want your configuration's end users to customize, and credentials or other sensitive values.
-5. **Plan & apply** - Execute Terraform Cloud runs (plans and applies) to manage your infrastructure. You can trigger these via the Terraform Cloud UI or by opening pull requests in your VCS.
+1. **Commit changes to version control** - Check your configuration files into a version control system (VCS) as the source of truth for your configuration.
+1. **Select a workspace** - Connect the VCS repo containing your configuration to a new or existing Terraform Cloud workspace.
+1. **Configure variables** - Define your workspace's Terraform variables and environment variables. These are any values you want your configuration's end users to customize, and credentials or other sensitive values.
+1. **Plan & apply** - Execute Terraform Cloud runs (plans and applies) to manage your infrastructure. You can trigger these via the Terraform Cloud UI or by opening pull requests in your VCS.
 
 Since Terraform Cloud supports multiple users, you can collaborate with your team on each of these steps. For instance, each time you plan a new change, your team can review and approve the plan before it is applied.
 

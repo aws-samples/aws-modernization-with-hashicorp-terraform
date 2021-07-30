@@ -5,6 +5,7 @@ weight: 1
 ---
 
 # Learning Objectives
+
 Today we are going to learn the following topics:
 
 - Infrastructure as Code Basics
