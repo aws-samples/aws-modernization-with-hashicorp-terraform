@@ -20,5 +20,3 @@ With automated policy enforcement for security, compliance, and operational best
 
 Self-Service Infrastructure
 Enable developers to provision their desired infrastructure from within their own workflows.
-
-    

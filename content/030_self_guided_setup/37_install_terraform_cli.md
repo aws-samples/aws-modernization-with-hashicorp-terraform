@@ -20,16 +20,16 @@ formula](https://github.com/hashicorp/homebrew-tap) from the terminal.
 First, install the HashiCorp tap, a repository of all our Homebrew packages.
 
 ```shell-session
-$ brew tap hashicorp/tap
+brew tap hashicorp/tap
 ```
 
 Now, install Terraform with `hashicorp/tap/terraform`.
 
 ```shell-session
-$ brew install hashicorp/tap/terraform
+brew install hashicorp/tap/terraform
 ```
 
-{{% notice note %}} 
+{{% notice note %}}
 This installs a signed binary and is automatically updated with
 every new official release.
 {{% /notice %}}
@@ -37,7 +37,7 @@ every new official release.
 To update to the latest version of Terraform, first update Homebrew.
 
 ```shell-session
-$ brew update
+brew update
 ```
 
 Then, run the `upgrade` command to download and use the latest Terraform version.
@@ -47,7 +47,9 @@ $ brew upgrade hashicorp/tap/terraform
 ==> Upgrading 1 outdated package:
 hashicorp/tap/terraform 0.15.3 -> 1.0.0
 ==> Upgrading hashicorp/tap/terraform 0.15.3 -> 1.0.0
+
 ```
+
 {{% /tab %}}
 {{% tab name="Chocolatey on Windows" %}}
 
@@ -56,7 +58,7 @@ management system for Windows. Install the [Terraform
 package](https://chocolatey.org/packages/terraform) from the command-line.
 
 ```shell-session
-$ choco install terraform
+choco install terraform
 ```
 
 {{% notice note %}}
@@ -77,86 +79,90 @@ verify HashiCorp's GPG signature, and install HashiCorp's Debian package
 repository.
 
 ```shell-session
-$ sudo apt-get update && sudo apt-get install -y gnupg software-properties-common curl
+sudo apt-get update && sudo apt-get install -y gnupg software-properties-common curl
 ```
 
 Add the HashiCorp [GPG key][gpg-key].
 
 ```shell-session
-$ curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
 ```
 
 Add the official HashiCorp Linux repository.
 
 ```shell-session
-$ sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
 ```
 
 Update to add the repository, and install the Terraform CLI.
 
 ```shell-session
-$ sudo apt-get update && sudo apt-get install terraform
+sudo apt-get update && sudo apt-get install terraform
 ```
+
 {{% /expand%}}
 
 {{%expand "CentOS/RHEL" %}}
 Install `yum-config-manager` to manage your repositories.
 
 ```shell-session
-$ sudo yum install -y yum-utils
+sudo yum install -y yum-utils
 ```
 
 Use `yum-config-manager` to add the official HashiCorp Linux repository.
 
 ```shell-session
-$ sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
 ```
 
 Install.
 
 ```shell-session
-$ sudo yum -y install terraform
+sudo yum -y install terraform
 ```
+
 {{% /expand%}}
 
 {{%expand "Fedora" %}}
 Install `dnf config-manager` to manage your repositories.
 
 ```shell-session
-$ sudo dnf install -y dnf-plugins-core
+sudo dnf install -y dnf-plugins-core
 ```
 
 Use `dnf config-manager` to add the official HashiCorp Linux repository.
 
 ```shell-session
-$ sudo dnf config-manager --add-repo https://rpm.releases.hashicorp.com/fedora/hashicorp.repo
+sudo dnf config-manager --add-repo https://rpm.releases.hashicorp.com/fedora/hashicorp.repo
 ```
 
 Install.
 
 ```shell-session
-$ sudo dnf -y install terraform
+sudo dnf -y install terraform
 ```
+
 {{% /expand%}}
 
 {{%expand "Amazon Linux" %}}
 Install `yum-config-manager` to manage your repositories.
 
 ```shell-session
-$ sudo yum install -y yum-utils
+sudo yum install -y yum-utils
 ```
 
 Use `yum-config-manager` to add the official HashiCorp Linux repository.
 
 ```shell-session
-$ sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
 ```
 
 Install.
 
 ```shell-session
-$ sudo yum -y install terraform
+sudo yum -y install terraform
 ```
+
 {{% /expand%}}
 
 {{% /tab %}}
@@ -167,7 +173,7 @@ $ sudo yum -y install terraform
 Verify that the installation worked by opening a new terminal session and listing Terraform's available subcommands.
 
 ```shell-session
-$ terraform -help
+terraform -help
 Usage: terraform [-version] [-help] <command> [args]
 
 The available commands for execution are listed below.
@@ -181,7 +187,7 @@ other commands, please read the help and docs before usage.
 Add any subcommand to `terraform -help` to learn more about what it does and available options.
 
 ```shell-session
-$ terraform -help plan
+terraform -help plan
 ```
 
 ### Troubleshoot
@@ -198,21 +204,25 @@ your chosen shell.
 
 {{< tabs >}}
 {{% tab name="Bash" groupId="ux" %}}
+
 ```shell-session
-$ touch ~/.bashrc
+touch ~/.bashrc
 ```
+
 {{% /tab %}}
 {{% tab name="ZSH" groupId="ux" %}}
+
 ```shell-session
-$ touch ~/.zshrc
+touch ~/.zshrc
 ```
+
 {{% /tab %}}
 {{< /tabs >}}
 
 Then install the autocomplete package.
 
 ```shell-session
-$ terraform -install-autocomplete
+terraform -install-autocomplete
 ```
 
 Once the autocomplete support is installed, you will need to restart your shell.

@@ -18,11 +18,11 @@ If you are currently logged in to an AWS Account, you can log out using this [li
 
    ![Event Engine](/images/setup/event-engine-initial-screen.png)
 
-2. Choose **AWS Console**, then **Open AWS Console**.
+1. Choose **AWS Console**, then **Open AWS Console**.
 
    ![Event Engine Dashboard](/images/setup/event-engine-dashboard.png)
 
-3. Use a single region for the duration of this workshop. This workshop supports the following regions:
+1. Use a single region for the duration of this workshop. This workshop supports the following regions:
 
 * us-east-1 (US East - N.Virginia)
 

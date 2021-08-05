@@ -13,7 +13,7 @@ There are two ways to update your workspace deployments on Terraform Cloud:
 
 - Changing the configuration in VCS
 - Updating variables in the Terraform Cloud UI.
-  
+
 ## Explore your workspace
 
 The landing page for a workspace includes an overview of its current state and configuration.
@@ -59,6 +59,7 @@ In this case, Terraform can make the change to the EC2 instance without destroyi
 Terraform Cloud workspaces can run speculative plans to show you the changes Terraform would make to your infrastructure if you merge a pull request.
 
 Speculative plans are:
+
 - **plan-only runs** - you cannot apply the proposed infrastructure changes until you merge the PR
 - **temporary** - they will not appear in any Terraform Cloud logs
 - **individual** - you can only access them from a direct link on a GitHub PR

@@ -89,7 +89,7 @@ It also shows the workspace's outputs in the "Outputs" tab for easy access.
 
 ![Terraform Cloud workspace outputs table](/images/hashicorp/terraform/tfc_hashicorp-training_workspaces_tfc-guide-example_resource_table_outputs.png)
 
-Congratulations! You created an AWS EC2 instance using Terraform Cloud. 
+Congratulations! You created an AWS EC2 instance using Terraform Cloud.
 
 Verify that the infrastructure exists by visiting the [AWS web console](https://console.aws.amazon.com/) page for EC2 in the **N.California/us-west-1** region, the region specified in the provider configuration.
 
