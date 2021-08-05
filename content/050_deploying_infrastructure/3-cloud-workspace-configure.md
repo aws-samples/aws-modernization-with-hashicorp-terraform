@@ -5,7 +5,7 @@ weight: 12
 ---
 ---
 
-In this tutorial, you will customize the workspace you created [in the previous tutorial](/040_terraform_cloud_setup/2-cloud-workspace-create.html) by defining Terraform variables for your EC2 settings. Then, you will retrieve your AWS credentials and set them as sensitive environment variables. Finally, you will use Terraform Cloud to provision an EC2 instance.
+In this tutorial, you will customize the workspace you created [in the previous tutorial](/040_terraform_cloud_setup/3-cloud-workspace-create.html) by defining Terraform variables for your EC2 settings. Then, you will retrieve your AWS credentials and set them as sensitive environment variables. Finally, you will use Terraform Cloud to provision an EC2 instance.
 
 ## Configure Terraform variables
 

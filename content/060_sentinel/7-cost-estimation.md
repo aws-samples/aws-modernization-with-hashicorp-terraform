@@ -50,10 +50,6 @@ In the backend configuration block, replace `"<YOUR_TERRAFORM_ORG>"` with the na
 Navigate to your Terraform Cloud organization and create a new VCS-backed
 workspace connected to your fork of the `learn-sentinel-tfc` repository.
 
-{{% notice note %}}
-If you completed the [Upload Your Sentinel Policy Set to Terraform Cloud tutorial](zz-/sentinel-cloud-integration.md), you may already have a workspace for this configuration. Feel free to use it.
-{{% /notice %}}
-
 ## Configure workspace variables
 
 1. Navigate to your `learn-sentinel-tfc` workspace's **"Variables"** page

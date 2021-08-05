@@ -2,7 +2,7 @@ baseURL = "/"
 languageCode = "en-US"
 defaultContentLanguage = "oyo"
 
-title = "AWS Modernization Workshop Sample"
+title = "AWS Modernization Workshop with HashiCorp Terraform Cloud"
 theme = "hugo-theme-learn"
 metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= "false"
@@ -17,7 +17,7 @@ enableEmoji = true
   # Author of the site, will be used in meta information
   author = "James Bland"
   # Description of the site, will be used in meta information
-  description = "AWS Modernization Workshop"
+  description = "AWS Modernization Workshop with HashiCorp Terraform Cloud"
   # Shows a checkmark for visited pages on the menu
   showVisitedLinks = true
   # Disable search function. It will hide search bar
