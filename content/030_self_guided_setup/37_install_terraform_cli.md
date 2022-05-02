@@ -1,5 +1,5 @@
 ---
-title: "5. Install Terraform CLI"
+title: "4. Install Terraform CLI"
 chapter: true
 weight: 19
 ---

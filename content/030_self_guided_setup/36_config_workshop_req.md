@@ -1,5 +1,5 @@
 ---
-title: "4. Configure workshop"
+title: "3. Configure workshop"
 chapter: true
 weight: 18
 ---
