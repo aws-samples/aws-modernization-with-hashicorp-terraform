@@ -9,7 +9,7 @@ In this tutorial, you will create a version control system (VCS) driven Terrafor
 
 ## Prerequisites
 
-While Terraform can provision resources on many different providers and connect with several popular version control systems (VCSs), this tutorial requires:
+While Terraform can provision resources on many providers and connect with several popular version control systems (VCSs), this tutorial requires:
 
 - an [AWS account](https://aws.amazon.com/)
 - a [GitHub](https://github.com/) account

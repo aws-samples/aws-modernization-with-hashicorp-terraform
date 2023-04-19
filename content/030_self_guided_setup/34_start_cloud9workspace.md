@@ -16,7 +16,7 @@ We will use Amazon Cloud9 to access our AWS accounts via the AWS CLI in this Wor
 
 ## Create a new Cloud9 IDE environment
 
-1 . Within the AWS console, use the region drop list to select **us-east-1 (N. Virginia)**.  This will ensure the workshop script provisions the resources in this same region..
+1 . Within the AWS console, use the region drop list to select **us-east-1 (N. Virginia)**.  This will ensure the workshop script provisions the resources in this same region.
 
 2 . Navigate to the [Cloud9 console](https://console.aws.amazon.com/cloud9/home) or just search for it under the **AWS console services** menu.
 

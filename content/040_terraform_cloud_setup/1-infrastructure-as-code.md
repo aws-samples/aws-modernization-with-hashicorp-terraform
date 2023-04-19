@@ -48,4 +48,4 @@ You can also connect Terraform Cloud to version control systems (VCSs) like GitH
 
 Now that you are familiar with the core concepts of infrastructure as code and Terraform, you are ready to write your own infrastructure configuration.
 
-Continue to the next tutorial to sign up and setup your Terraform Cloud account.
+Continue to the next tutorial to sign up and set up your Terraform Cloud account.
