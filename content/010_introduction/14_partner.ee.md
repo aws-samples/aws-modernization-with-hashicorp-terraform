@@ -12,7 +12,7 @@ HashiCorp was founded by Mitchell Hashimoto and Armon Dadgar in 2012 with the go
 
 The datacenter of today is very different than the datacenter of yesterday, and we think the datacenter of tomorrow is just around the corner. We're writing software to take you all the way from yesterday to today, and then safely to tomorrow and beyond.
 
-Physical, virtual, containers. Private cloud, public cloud, hybrid cloud. IaaS, PaaS, SaaS. Windows, Linux, Mac. These are just some of the choices faced when architecting a datacenter of today. And the choice is not one or the other; instead, it is often a combination of many of these.
+Physical, virtual, containers. Private cloud, public cloud, hybrid cloud. IaaS, PaaS, SaaS. Windows, Linux, Mac. These are just some choices faced when architecting a datacenter of today. And the choice is not one or the other; instead, it is often a combination of many of these.
 
 HashiCorp builds tools to ease these decisions by presenting solutions that span the gaps. Our tools manage both physical machines and virtual machines, Windows, and Linux, SaaS and IaaS, etc. And we're committed to supporting next-generation technologies, as well.
 

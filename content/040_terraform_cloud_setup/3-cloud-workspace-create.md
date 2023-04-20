@@ -9,12 +9,12 @@ In this tutorial, you will create a version control system (VCS) driven Terrafor
 
 ## Prerequisites
 
-While Terraform can provision resources on many different providers and connect with several popular version control systems (VCSs), this tutorial requires:
+While Terraform can provision resources on many providers and connect with several popular version control systems (VCSs), this tutorial requires:
 
 - an [AWS account](https://aws.amazon.com/)
 - a [GitHub](https://github.com/) account
 
-## Fork a Github repository
+## Fork a GitHub repository
 
 Visit [this example GitHub repository](https://github.com/hashicorp/tfc-guide-example), which contains the Terraform configuration for an EC2 instance.
 
@@ -24,7 +24,7 @@ Click the **"Fork"** button at the top right of the page to copy the repository 
 
 Explore your fork of the repository. It contains Terraform configuration files, which define and expose information about your infrastructure:
 
-- `main.tf` specifies the [AWS provider](https://registry.terraform.io/providers/hashicorp/aws/latest), a provider plugin that connects Terraform Cloud to the AWS API, and the [random provider](https://registry.terraform.io/providers/hashicorp/random/latest), another provider that will generate the random name for the table. It also defines resources that represent the table name and the table itself, with the information that AWS needs to know about the table's settings.
+- `main.tf` specifies the [AWS provider](https://registry.terraform.io/providers/hashicorp/aws/latest), a provider plugin that connects Terraform Cloud to the AWS API. It also defines the resources to create an Amazon EC2 instance using the latest Ubuntu image.
 - `variables.tf` defines the input variables that are referenced in `main.tf`, which make the configuration easy to customize and collaborate on. You will set some of these values in the Terraform Cloud UI later on in this tutorial.
 - `outputs.tf` defines the information about your infrastructure that Terraform Cloud will display to you when it makes changes.
 - `versions.tf` defines version constraints for Terraform, the AWS provider, and the random provider.

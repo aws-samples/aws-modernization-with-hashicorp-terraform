@@ -80,7 +80,7 @@ The Policy Sets page lists all existing policy sets. The list will be empty if t
 
 The policy set creation page offers a few options for creating your policy set. Connect to a VCS to source the policy set.
 
-1. Select **"Github"** as the VCS provider
+1. Select **"GitHub"** as the VCS provider
 1. Select your forked repository
 1. On the **"Configure settings"** section, under **"Scope of Policies"**, select "Policies enforced on select workspaces".
 1. Specify the workspaces you want this policy to apply to and click the **"Add workspace"** button to complete adding the workspace to this policy set.
@@ -98,7 +98,7 @@ After creating the policy set, you'll be taken back to the policy sets index pag
 
 ![Terraform Cloud new policy set added](/images/hashicorp/terraform/tfc_hashicorp-training_settings_policy-sets_new_policy_added.png)
 
-Now that the policy set is configured, navigate to one of the workpaces you selected and queue a new plan. There will now be an additional policy check step in the run, and you should see the `allowed-terraform-version` policy execute and pass in the output.
+Now that the policy set is configured, navigate to one of the workspaces you selected and queue a new plan. There will now be an additional policy check step in the run, and you should see the `allowed-terraform-version` policy execute and pass in the output.
 
 ![Terraform Cloud run policy check passed](/images/hashicorp/terraform/cloud/passed-policy-set.png)
 

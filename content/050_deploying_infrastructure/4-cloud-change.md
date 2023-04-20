@@ -24,10 +24,10 @@ On the upper right hand side, you can find a resource count, the workspace versi
 
 Along the top is a menu of available actions and configurations for the workspace.
 
-- The **Runs** tab shows a list of all of the plan and apply actions you have taken with this workspace.
+- The **Runs** tab shows a list of all the plan and apply actions you have taken with this workspace.
 - The **States** tab shows the state of your workspace after each successful run. Terraform stores everything it knows about your infrastructure in state as a `tfstate` file. This allows Terraform to not only create — but also manage — your infrastructure as it changes over time.
 - The **Variables** tab is where you configure Terraform variables and environment variables.
-- **Settings** contains all of the Terraform Cloud settings for your workspace, and is where you will destroy your infrastructure at the end of these tutorials.
+- **Settings** contains all the Terraform Cloud settings for your workspace, and is where you will destroy your infrastructure at the end of these tutorials.
 - The **lock icon** indicates whether the workspace is locked, preventing others from triggering new runs.
 - The **Actions** menu allows you to lock the workspace or trigger a new run.
 
@@ -78,12 +78,12 @@ The repository you forked already includes a branch named `add_tag` that adds an
 
 Visit your forked `tfc-guide-example` repo in GitHub and click "New pull request" button to create a pull request.
 
-Set the base repository to **your fork of the tfc-guide-example repo** (not the fork in the HashiCorp organization) and the base branch to the `master` branch. Set the the compare branch to `add_tag`.
+Set the base repository to **your fork of the tfc-guide-example repo** (not the fork in the HashiCorp organization) and the base branch to the `master` branch. Set the compare branch to `add_tag`.
 
 ![Pull Request](/images/hashicorp/terraform/github_tfc-guide-example_create_pull_request.png)
 
 {{% notice note %}}
-You must create the PR against **your personal forked repository**. You will need to merge the PR later in this tutorial and you cannot merge to the official example repo.
+You must create the PR against **your personal forked repository**. You will need to merge the PR later in this tutorial, and you cannot merge to the official example repo.
 {{% /notice %}}
 
 Create the pull request by clicking through the GitHub UI. Once you have created the pull request, Terraform Cloud will trigger a speculative plan.

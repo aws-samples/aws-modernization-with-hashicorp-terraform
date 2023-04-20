@@ -10,7 +10,7 @@ Today we are going to learn the following topics:
 
 - Infrastructure as Code Basics
 - Terraform Cloud
-  - Setup anc Configure Infrastructure
+  - Setup and Configure Infrastructure
   - Change Infrastructure
   - Destroy Infrastructure
 - Policy as Code
