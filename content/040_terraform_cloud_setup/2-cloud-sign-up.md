@@ -20,7 +20,7 @@ For more details on the Terraform Cloud tiers, visit the [feature overview](http
 
 ### The VCS-driven workflow
 
-A workspace is the basic unit of Terraform Cloud infrastructure configuration. A workspace contains Terraform configuration files, environment variables, Terraform input variables, and state files everything Terraform needs to manage a given collection of infrastructure. To manage infrastructure with Terraform Cloud, you:
+A workspace is the basic unit of Terraform Cloud infrastructure configuration. A workspace contains Terraform configuration files, environment variables, Terraform input variables, and state files ; everything Terraform needs to manage a given collection of infrastructure. To manage infrastructure with Terraform Cloud, you:
 
 1. **Write configuration** - Create or update Terraform configuration, which represents your infrastructure in HashiCorp Configuration Language (HCL).
 1. **Commit changes to version control** - Check your configuration files into a version control system (VCS) as the source of truth for your configuration.
